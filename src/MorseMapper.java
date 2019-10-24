@@ -20,6 +20,10 @@ public class MorseMapper {
 		return stringBuffer.toString();
 	}
 	
+	public String smoosh(String morseCode) {
+		return morseCode.replace(" ", "");
+	}
+	
 	public void mapMorseValues(HashMap<Character, String> map) {
 		map.put('A', ".-");
 		map.put('B', "-...");

@@ -16,6 +16,12 @@ class MorseMapperTest {
 	}
 	
 	@Test
+	void shouldSmooshMorseCode() {
+		String morse = morseMapper.convertToMorse("MORSE CODE");
+		assertEquals(morseMapper.smoosh(morse),  "-----.-.....-.-.----...");
+	}
+	
+	@Test
 	void shouldNotFindUnmappedValues() {
 		assertEquals(morseMapper.convertToMorse("!@#$%123"), "");
 	}
